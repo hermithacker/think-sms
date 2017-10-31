@@ -19,5 +19,6 @@
             "homepage": "http://nop.work"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
