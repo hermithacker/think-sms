@@ -1,0 +1,22 @@
+{
+    "name": "nop/think-sms",
+    "description": "The ThinkPHP5 sms Package",
+    "homepage": "https://github.com/hermithacker/think-sms",
+    "type": "think-extend",
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src"
+        }
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "nop",
+            "email": "noperise@gmail.com",
+            "homepage": "http://nop.work"
+        }
+    ],
+}
