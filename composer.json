@@ -18,5 +18,6 @@
             "email": "noperise@gmail.com",
             "homepage": "http://nop.work"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
