@@ -18,14 +18,14 @@ class Sms
     protected static $supplier;
     protected static $studlyCache = [];
 
-    private static function buildConnector()
+    private static function buildSupplier()
     {
         $options = Config::get('sms');
         $type    = !empty($options['type']) ? $options['type'] : 'baidu';
 
         if (!isset(self::$supplier)) {
 
-            $class = false !== strpos($type, '\\') ? $type : '\\think\\sms\\supplier\\' . self::studly($type);
+            $class = false !== strpos($type, '\\') ? $type : '\\think\\sms\supplier\\' . self::studly($type);
 
             self::$supplier = new $class($options);
         }
@@ -52,6 +52,6 @@ class Sms
 
     public static function __callStatic($name, $arguments)
     {
-        return call_user_func_array([self::buildConnector(), $name], $arguments);
+        return call_user_func_array([self::buildSupplier(), $name], $arguments);
     }
 }

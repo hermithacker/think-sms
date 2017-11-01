@@ -1,5 +1,5 @@
 <?php
-namespace think\sms\supplier;
+namespace think\sms;
 
 abstract class Supplier
 {

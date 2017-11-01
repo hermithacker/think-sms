@@ -1,7 +1,7 @@
 <?php
 
 namespace think\sms\supplier;
-use think\Config;
+use think\sms\Supplier;
 
 class Baidu extends Supplier
 {
@@ -48,9 +48,9 @@ class Baidu extends Supplier
         ],
     ];
 
-    public function __construct()
+    public function __construct($options)
     {
-        $config = Config::get('sms.baidu');
+        $config = $options[$options['type']];
         $this->accessKey = isset($config['accessKey'])?$config['accessKey']:'';
         $this->secretAccessKey = isset($config['secretAccessKey'])?$config['secretAccessKey']:'';
         $this->invokeId = isset($config['invokeId'])?$config['invokeId']:'';
